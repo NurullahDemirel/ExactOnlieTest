@@ -1,0 +1,61 @@
+Raradan çıkarma =>>>>
+
+        $zip = new ZipArchive();
+
+        $zipFile = $zip->open(public_path('New folder.zip'));
+
+        if ($zipFile){
+            if (!Storage::exists('extractsFiles')){
+                Storage::makeDirectory(public_path('extractsFiles'));
+            }
+            $zip->extractTo(public_path('extractsFiles'));
+            $zip->close();
+            >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+urlden locale dosyayı alma
+
+copy('https://getsamplefiles.com/download/rar/sample.rar',public_path('sample.rar'));
+
+
+------------------------------
+
+export xml file
+
+use pdeans\Builders\XmlBuilder;
+
+        $builder = new XmlBuilder();
+
+        $xml = $builder->create('Order_Add', [
+            '@t' => [
+                'Users' => [
+                    'User' => collect(User::all())->map(function ($item) {
+                        return  [
+                            'name'=>$item->name,
+                            'email'=>$item->email,
+                            'created'=>$item->created_at->format('Y-m-d H:i:s')
+                        ];
+
+                    })->toArray(),
+
+                    'Posts'=>[
+                        'Post'=>[
+                            [
+                                'name'=>'name1',
+                                'text'=>'Text1'
+                            ],
+                            [
+                                'name'=>'name2',
+                                'text'=>'Text2'
+                            ]
+                        ]
+                    ]
+                ],
+            ],
+        ]);
+
+       Storage::disk('public_project')->put('users.xml',$xml);
+
+
+       ------------------

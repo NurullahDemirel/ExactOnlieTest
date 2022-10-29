@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ExactController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[ExactController::class,'index']);
 Route::get('/callback',[ExactController::class,'index']);
 Route::get('/sale',[ExactController::class,'exaample']);
+Route::get('/test',[TestController::class,'test']);

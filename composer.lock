@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd0304696c5297caa6f2d748683bf110",
+    "content-hash": "ba7d8d14417ac77afcb95891a1609fa7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2140,6 +2140,56 @@
                 "source": "https://github.com/opis/closure/tree/3.6.3"
             },
             "time": "2022-01-27T09:35:39+00:00"
+        },
+        {
+            "name": "pdeans/xml-builder",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdeans/xml-builder.git",
+                "reference": "832b07f6df77fded7bac74403cd645a6e52f937f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pdeans/xml-builder/zipball/832b07f6df77fded7bac74403cd645a6e52f937f",
+                "reference": "832b07f6df77fded7bac74403cd645a6e52f937f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xmlwriter": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pdeans\\Builders\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Stearns",
+                    "email": "pdeans1986@gmail.com",
+                    "homepage": "http://patrickstearns.us"
+                }
+            ],
+            "description": "Simple and lightweight library to make generating XML a breeze.",
+            "keywords": [
+                "builder",
+                "writer",
+                "xml",
+                "xml builder",
+                "xml generator",
+                "xml writer"
+            ],
+            "support": {
+                "issues": "https://github.com/pdeans/xml-builder/issues",
+                "source": "https://github.com/pdeans/xml-builder/tree/master"
+            },
+            "time": "2018-10-27T05:04:49+00:00"
         },
         {
             "name": "phpoption/phpoption",
